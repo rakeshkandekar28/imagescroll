@@ -1,0 +1,139 @@
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    width: calc(33.33% - 10px);
+    margin: 5px;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-card {
+    position: relative;
+    width: 100%;
+    padding-top: 150%; /* 2:3 aspect ratio */
+    overflow: hidden;
+  }
+  
+  .image-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+  }
+  .contenttitle{
+    font-size: 16px;
+    text-align: left;
+    font-weight: 300;
+    margin: 0.5rem 0;
+  }
+
+
+
+  
+  .gridparentwrapper{
+    padding-top: 70px;
+  }
+
+  .navheaderwrapper{
+    background-image: url(https://test.create.diagnal.com/images/nav_bar.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    display: block;
+    height: 70px;
+    padding: 0 15px;
+  }
+  .navheader{
+   width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  img.backbtn {
+    width: 20px;
+    margin-right: 1rem;
+}
+.backandtextwrapper{
+  display: flex;
+    align-items: center;
+}
+
+
+/* search Style */
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search{
+  height: 30px;
+    width: 27px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    padding-right: 40px;
+    color: #fff;
+    position: absolute;
+    right: -15px;
+    width: 100%;
+    z-index: 9999;
+    top: 30px;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 20px;
+  height: 20px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  /* position: absolute;
+  right: 0px; */
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: #000000;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: #000000;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.pt-0{
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
