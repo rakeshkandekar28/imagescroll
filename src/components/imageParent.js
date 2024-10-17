@@ -1,8 +1,6 @@
 import React from "react";
 import ImageItem from "./imageItem";
 
-
-
 const ImageGrid = ({ data }) => {
   return (
     <>

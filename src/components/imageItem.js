@@ -1,10 +1,14 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { Tooltip } from "antd";
 import { checkImageExists } from "../utility/common";
 import { Common_URL } from "../url";
 
 const ImageItem = React.memo(({ item }) => {
   const [isImageValid, setIsImageValid] = useState(false);
-  const placeholderImage = useMemo(() => `${Common_URL}/images/placeholder_for_missing_posters.png`, []); // if api missing image
+  const placeholderImage = useMemo(
+    () => `${Common_URL}/images/placeholder_for_missing_posters.png`,
+    []
+  ); // if api missing image
   const title = useMemo(() => item.name || "Untitled", [item.name]);
 
   useEffect(() => {
@@ -26,14 +30,11 @@ const ImageItem = React.memo(({ item }) => {
   return (
     <>
       <div className="image-card">
-        <img
-          loading="lazy"
-          src={imageSrc}
-          alt={title}
-          className="img-fluid"
-        />
+        <img loading="lazy" src={imageSrc} alt={title} className="img-fluid" />
       </div>
-      <h5 className="contenttitle">{title}</h5>
+      <Tooltip title={title} trigger="hover">
+        <h5 className="contenttitle">{title}</h5>
+      </Tooltip>
     </>
   );
 });

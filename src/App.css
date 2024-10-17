@@ -11,3 +11,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* iOS-specific styles */
+@supports (-webkit-overflow-scrolling: touch) {
+  /* Add any iOS-specific styles here */
+  body {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling */
+  }
+  
+  input[type="search"] {
+    -webkit-appearance: none;
+  }
+}
