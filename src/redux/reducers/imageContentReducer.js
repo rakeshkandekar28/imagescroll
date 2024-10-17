@@ -12,7 +12,6 @@ const initialState = {
 const imageContentReducer = (imageContent = initialState, action) => {
 
   const { type, payload } = action;
-  console.log("payload",imageContent, payload)
   switch (type) {
     case RETRIEVE_IMAGECONTENT:
       return {

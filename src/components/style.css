@@ -97,8 +97,8 @@ img.backbtn {
   position: absolute;
   right: -15px;
   width: 100%;
-  z-index: 9999;
-  top: 30px;
+  z-index: 10;
+  top: 5px;
   -webkit-appearance: none;
   /* iOS compatibility */
   -webkit-border-radius: 25px;
@@ -132,6 +132,10 @@ img.backbtn {
   /* Remove tap highlight on iOS */
 }
 
+.open-input-search, .close-input-search{
+  position: relative;
+}
+
 .open-input-search>.input-search {
   width: 300px;
   border-radius: 0px;
@@ -158,31 +162,13 @@ img.backbtn {
   padding-bottom: 0 !important;
 }
 
-
-.clear {
+.btn-clear {
   position: absolute;
-  float: right;
-  top: 19px;
-  right: -10px;
-  background: #fff;
-  text-align: center;
-  cursor: pointer;
-  z-index: 9999;
-  -webkit-tap-highlight-color: transparent;
-  /* Remove tap highlight on iOS */
-}
-
-.clear:after {
-  content: "X";
-  position: absolute;
+  z-index: 11;
+  background: transparent;
   color: #fff;
-  font-size: 20px;
-  top: 12px;
-  right: 20px;
-}
-
-input:invalid+.clear {
-  visibility: hidden;
+  top: 8px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .infocontent{

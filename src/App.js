@@ -68,7 +68,7 @@ function App() {
   return (
     <>
       <div>
-        <ImageSearch setSearchContent={setSearchContent} />
+        <ImageSearch setSearchContent={setSearchContent}/>
         <div className="gridparentwrapper">{renderContent()}</div>
       </div>
     </>
